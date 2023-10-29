@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+// import HomePage from "./pages/HomePage";
+import { HomePage } from "./utils/pages.list";
 import { ClerkProvider } from "@clerk/clerk-react";
 
 if (!import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY) {
