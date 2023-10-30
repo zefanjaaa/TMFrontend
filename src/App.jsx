@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-
 import { HomePage } from "./utils/pages.list";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { NavBar } from "./utils/components.list";
