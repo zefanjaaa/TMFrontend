@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { HomePage } from "./utils/pages.list";
+import { HomePage, About, AllRecipes } from "./utils/pages.list";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { NavBar } from "./utils/components.list";
 if (!import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY) {
@@ -15,6 +15,8 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/allrecipes" element={<AllRecipes />} />
         </Routes>
       </ClerkProvider>
     </div>
