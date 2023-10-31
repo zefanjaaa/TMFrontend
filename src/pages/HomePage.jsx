@@ -1,9 +1,5 @@
 const HomePage = () => {
-  return (
-    <div>
-      <h1>This is the homepage of TasteMate!</h1>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default HomePage;

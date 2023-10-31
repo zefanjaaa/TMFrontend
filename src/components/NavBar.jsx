@@ -8,35 +8,37 @@ const NavBar = () => {
   const handleShowSignUp = () => setShowSignUp((prevState) => !prevState);
   const handleShowSignIn = () => setShowSignIn((prevState) => !prevState);
   return (
-    <nav style={{ display: "flex", justifyContent: "space-between" }}>
-      <div
-        style={{ display: "flex", alignItems: "center" }}
-        className="ml-10 mt-20"
-      >
+    <nav className="flex justify-between">
+      <div className="flex items-center ml-20 mt-10">
         <img src="TasteMadeLogo.svg" alt="logo" className="w-20 h-20" />
-        <h1 className="font-bold text-2xl">TasteMate</h1>
+        <p className="font-bold text-2xl pt-5 pr-5">TasteMate</p>
       </div>
-      <div></div>
+      {/* <div className="mt-20"></div> */}
       <div className="mt-20">
         <a href="/" className="mr-4">
           Home
         </a>
-        <a href="/about" className="mr-4">
-          About
-        </a>
-        <a href="/allrecipes" className="ml-4">
+
+        <a href="/allrecipes" className=" ml-4 mr-4">
           All recipes
+        </a>
+
+        <a href="/about" className="ml-4">
+          About
         </a>
       </div>
       <div className="font-bold mt-20">
-        <button className="mr-10" onClick={handleShowSignUp}>
-          Sign Up
-        </button>
-        <button onClick={handleShowSignIn}>Sign In</button>
+        {!showSignIn && (
+          <button className="mr-10" onClick={handleShowSignUp}>
+            Sign Up
+          </button>
+        )}
+        {!showSignUp && <button onClick={handleShowSignIn}>Sign In</button>}
       </div>
       <div>
-        {showSignUp ? <SignUp /> : <p></p>}
-        {showSignIn ? <SignIn /> : <p></p>}
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          {showSignUp ? <SignUp /> : showSignIn ? <SignIn /> : null}
+        </div>
       </div>
     </nav>
   );
