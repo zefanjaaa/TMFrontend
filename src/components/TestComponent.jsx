@@ -29,6 +29,8 @@ const TestComponent = () => {
           {data.Image.map((img, index) => (
             <img className="w-40 h-40" key={index} src={img} alt="recipe" />
           ))}
+
+          <p>{data.Description}</p>
         </div>
       ))}
     </div>
