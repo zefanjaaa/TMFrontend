@@ -24,6 +24,7 @@ const NavBar = () => {
       <div>
         {!showSignIn && <button onClick={handleShowSignUp}>Sign Up</button>}
         {!showSignUp && <button onClick={handleShowSignIn}>Sign In</button>}
+        <p>test</p>
       </div>
       <div>
         <div>{showSignUp ? <SignUp /> : showSignIn ? <SignIn /> : null}</div>
