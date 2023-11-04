@@ -23,11 +23,9 @@ const TestComponent = () => {
       <h1>Test Component</h1>
       {data.map((data) => (
         <div key={data._id}>
-          <p className="text-2xl" key={data._id}>
-            {data.Title}
-          </p>
+          <p key={data._id}>{data.Title}</p>
           {data.Image.map((img, index) => (
-            <img className="w-40 h-40" key={index} src={img} alt="recipe" />
+            <img key={index} src={img} alt="recipe" />
           ))}
 
           <p>{data.Description}</p>
